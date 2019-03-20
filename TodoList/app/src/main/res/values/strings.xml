@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TODO List</string>
+    <string-array name="todo_items">
+        <item>Publish next homework</item>
+        <item>Build the sample app</item>
+        <item>New todo item</item>
+    </string-array>
+</resources>

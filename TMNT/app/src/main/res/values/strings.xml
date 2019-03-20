@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TMNT</string>
+    <string-array name="characters">
+        <item>Leo</item>
+        <item>Mike</item>
+        <item>Don</item>
+        <item>Raphael</item>
+    </string-array>
+</resources>
