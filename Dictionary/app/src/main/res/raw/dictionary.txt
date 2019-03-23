@@ -1,0 +1,2 @@
+android;Android es una plataforma genial para crear aplicaciones moviles
+Android studio;Android Studio es el IDE preferido para construir aplicaciones Android
