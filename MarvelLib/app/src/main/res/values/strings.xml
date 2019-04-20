@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MarvelLib</string>
+    <string name="main_help">Click a movie to see more info about it</string>
+    <string name="main_title">Marvel Library</string>
+</resources>
