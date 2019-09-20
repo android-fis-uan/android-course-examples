@@ -12,7 +12,9 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import java.lang.Exception
 
-
+/**
+ * Detailed view for a card
+ */
 class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +24,9 @@ class DetailActivity : AppCompatActivity() {
         loadCard()
     }
 
+    /**
+     * Load card information
+     */
     fun loadCard() {
         //val image = intent.getStringExtra("cardImage")
         val text = intent.getStringExtra("cardText")
@@ -38,6 +43,7 @@ class DetailActivity : AppCompatActivity() {
                 }
 
                 override fun onSuccess() {
+                    // Not implemented
                 }
             })
     }

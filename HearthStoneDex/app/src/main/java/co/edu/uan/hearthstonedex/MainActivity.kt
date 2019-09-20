@@ -11,6 +11,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.collections.ArrayList
 
+/**
+ * Main Activity
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,14 +23,14 @@ class MainActivity : AppCompatActivity() {
         drawCards()
     }
 
-    fun drawCards() {
+    private fun drawCards() {
         val cardList = readCardsFile()
         for(card in cardList) {
             addCard(card)
         }
     }
 
-    fun addCard(card: String) {
+    private fun addCard(card: String) {
         val ib = ImageButton(this)
         var imageId = resources.getIdentifier(getCardCropImage(card),"drawable", packageName)
         if(imageId==0) {
@@ -46,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         cardsLayout.addView(tv)
     }
 
-    fun readCardsFile() : ArrayList<String> {
+    private fun readCardsFile() : ArrayList<String> {
         // Open the cards file as a raw resource
         val inputStream = resources.openRawResource(R.raw.base_cards)
         val scanner = Scanner(inputStream)
@@ -61,22 +64,22 @@ class MainActivity : AppCompatActivity() {
         return cardsList
     }
 
-    fun getCardName(card: String) : String {
+    private fun getCardName(card: String) : String {
         val cols = card.split(",")
         return cols[1]
     }
 
-    fun getCardCropImage(card: String) : String {
+    private fun getCardCropImage(card: String) : String {
         val cols = card.split(",")
         return cols[2]
     }
 
-    fun getCardImage(card: String) : String {
+    private fun getCardImage(card: String) : String {
         val cols = card.split(",")
         return cols[3]
     }
 
-    fun getCardText(card: String) : String {
+    private fun getCardText(card: String) : String {
         val cols = card.split(",")
         return cols[5]
     }

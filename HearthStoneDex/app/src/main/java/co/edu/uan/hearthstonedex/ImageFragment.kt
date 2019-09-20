@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
+/**
+ * Image Fragment
+ */
 class ImageFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
