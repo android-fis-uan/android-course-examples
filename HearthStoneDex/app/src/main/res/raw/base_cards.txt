@@ -1,0 +1,17 @@
+shortslug,name,cropImage,image,artistName,flavorText,text,attack
+innervate,Innervate,innervate_crop,innervate,Doug Alexander,"Some druids still have flashbacks from strangers yelling ""Innervate me!!"" at them.",Gain 1 Mana Crystal this turn only.,
+moonfire,Moonfire,moonfire_crop,moonfire,Richard Wright,"""Cast Moonfire; and never stop."" - How to Be a Druid; Chapter 5; Section 3",Deal 1 damage.,
+lunara,Lunara,,lunara,,,,
+elise,Elise Starseeker,,elise_starseeker,Arthur Bozonnet,,,
+pounce,Pounce,pounce_crop,pounce,Rudy Siswanto,Comes with an overwhelming urge to jump into the nearest open box.,Give your hero +2 Attack this turn.,
+claw,Claw,claw_crop,claw,Dany Orizio,The claw decides who will stay and who will go.,Give your hero +2 Attack this turn. Gain 2 Armor.,
+savagery,Savagery,savagery_crop,savagery,Dave Rapoza,It is true that some druids are savage; but others still enjoy a quiet moment and a spot of tea.,Deal damage equal to your hero's Attack to a minion.,
+naturalize,Naturalize,naturalize_crop,naturalize,Leo Che,Another one bites the dust.,Destroy a minion. Your opponent draws 2 cards.,
+living,Living Roots,living_roots_crop,living_roots,Dan Brereton,2 out of 2 saplings recommend that you summon the saplings.,<b>Choose One -</b> Deal 2 damage; or Summon two 1/1 Saplings.,
+raven,Raven Idol,raven_idol_crop,raven_idol,A. J. Nazzaro,Was petrified when it found out it didn't make the cut for Azerothian Idol.,<b>Choose One -</b> <b>Discover</b> a minion; or <b>Discover</b> a spell.,
+forbidden,Forbidden Ancient,forbidden_ancient_crop,forbidden_ancient,Grace Liu,This Ancient was banned from the local tavern after tucking a 'Dr. Boom' up its sleeve.,<b>Battlecry:</b> Spend all your Mana. Gain +1/+1 for each Mana spent.,1
+enchanted,Enchanted Raven,enchanted_raven_crop,enchanted_raven,Daria Tuzova,Once upon a midnight restive; Medivh pondered; feeling festive!,,2
+jade,Jade Idol,jade_idol_crop,jade_idol,Matthew O'Connor,Shuffle or no guts.,<b>Choose One -</b> Summon a <b>Jade Golem</b>; or Shuffle 3 copies of this card into your deck.,
+mark,Mark of the Lotus,mark_of_crop,mark_of,Wayne Reynolds,The mark of the Lotus is a little flower drawn in permanent marker on the ankle.,Give your minions +1/+1.,
+earthen,Earthen Scales,earthen_scales_crop,earthen_scales,Mike Azevedo,You can make your own Earthen Scales at home. Step 1: Roll around in the dirt. Step 2: Magic.,Give a friendly minion +1/+1; then gain Armor equal to its Attack.,
+jungle,Jungle Giants,jungle_giants_crop,jungle_giants,Konstantin Turovec,Forming the Golakka Crater was the end of Barnabus' disastrous career as a dancer.,<b>Quest:</b> Summon 5 minions with 5 or more Attack. <b>Reward:</b> Barnabus.,
