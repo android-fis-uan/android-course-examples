@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         controller = Controller(this)
-        loadCatButton.setOnClickListener { _ -> loadCatController() }
+        loadCatButton.setOnClickListener { _ -> loadCat() }
     }
 
     fun loadCat() {
