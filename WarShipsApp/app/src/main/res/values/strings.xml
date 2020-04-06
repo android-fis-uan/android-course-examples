@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WarShipsApp</string>
+    <!-- IDs -->
+    <string name="SHIP_ID">SHIP_ID</string>
+    <!-- Samples -->
+    <string name="sample_ship_description">Ejemplar de un tipo de barco especial, que mezcla aspectos de un crucero y un acorazado. Oficialmente clasificado como «crucero de gran tamaño», estaba equipado con cañones de 305 mm, tenía una alta velocidad y una potente defensa AA. Por otro lado, su protección era bastante ligera para su tamaño.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

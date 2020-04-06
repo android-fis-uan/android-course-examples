@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ShipListFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <GridLayout
+            android:id="@+id/shipList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:columnCount="2"
+            android:rowCount="4">
+
+            <ImageButton
+                android:id="@+id/ship1"
+                android:tag="pasc510"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/pasc510small"
+                />
+
+            <ImageButton
+                android:id="@+id/ship2"
+                android:tag="pjsb510"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/pjsb510small" />
+
+            <ImageButton
+                android:id="@+id/ship3"
+                android:tag="pzsb509"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/pzsb509small" />
+
+        </GridLayout>
+    </ScrollView>
+
+</FrameLayout>
