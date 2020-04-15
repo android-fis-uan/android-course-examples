@@ -17,9 +17,9 @@
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"
             android:columnCount="2"
-            android:rowCount="4">
+            android:rowCount="6">
 
-            <ImageButton
+            <!--ImageButton
                 android:id="@+id/ship1"
                 android:tag="pasc510"
                 android:layout_width="0dp"
@@ -51,7 +51,7 @@
                 android:layout_gravity="fill"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/pzsb509small" />
+                app:srcCompat="@drawable/pzsb509small" /-->
 
         </GridLayout>
     </ScrollView>
