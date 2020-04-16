@@ -4,11 +4,11 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import androidx.fragment.app.Fragment
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_ship_list.*
 import java.util.*
@@ -57,6 +57,15 @@ class ShipListFragment : Fragment() {
         }
     }
 
+    /*
+    0: id
+    1: name
+    2: type
+    3: nation
+    4: img_small
+    5: img_medium
+    6: description
+     */
     fun loadShips() {
         var counter = 0
         val fileRead = Scanner(resources.openRawResource(R.raw.ships))
@@ -65,7 +74,7 @@ class ShipListFragment : Fragment() {
             val shipLine = fileRead.nextLine()
             val data = shipLine.split("\t")
             shipNames.add(data[0])
-            if(counter++ >5) {
+            if(counter++ >3) {
                 break
             }
         }
@@ -76,9 +85,10 @@ class ShipListFragment : Fragment() {
     fun showShips() {
         for(shipName in shipNames) {
             val shipButton = ImageButton(activity)
-            /*val resId = resources.getIdentifier(shipName.toLowerCase()+"small", "drawable", activity?.packageName)
-            shipButton.setImageResource(resId)*/
-            Picasso.get().load("https://glossary-wows-global.gcdn.co/icons//vehicle/small/PRSC910_b0e51720e691e7e5e52ae2d5924e23224cbc0533d9f1080ac3c29f183a92fec3.png").into(shipButton)
+            val resId = resources.getIdentifier(shipName.toLowerCase()+"small", "drawable", activity?.packageName)
+            val url = "https://glossary-wows-global.gcdn.co/icons//vehicle/small/PASC510_1c368c094c16e8fc1fed07afbc237cb7fde0cf956ce171dc419eabfbaedf4364.png"
+            //shipButton.setImageResource(resId)
+            Picasso.get().load(url).into(shipButton)
             shipList.addView(shipButton)
 //            android:tag="pasc510"
             shipButton.setTag(shipName.toLowerCase())
