@@ -7,6 +7,7 @@
     "limit": 100,
     "page": 1
   },
+  "jq": "[ .data[] |  {id: .ship_id_str, name: .name, type: .type, nation: .nation, img_small: .images.small,img_medium: .images.medium, description: .description } ] |  (.[0] | keys_unsorted ) as $cols | map(. as $row | $cols | map($row[.])) as $rows | $cols, $rows[] | @tsv",
   "data": {
     "3760109552": {
       "description": "Ejemplar de un tipo de barco especial, que mezcla aspectos de un crucero y un acorazado. Oficialmente clasificado como «crucero de gran tamaño», estaba equipado con cañones de 305 mm, tenía una alta velocidad y una potente defensa AA. Por otro lado, su protección era bastante ligera para su tamaño.",

@@ -9,8 +9,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
+import com.google.gson.JsonArray
+import com.google.gson.JsonObject
+import com.koushikdutta.async.future.FutureCallback
+import com.koushikdutta.ion.Ion
+import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_ship_list.*
+import java.lang.Exception
 import java.util.*
 
 /**
@@ -19,6 +27,7 @@ import java.util.*
 class ShipListFragment : Fragment() {
 
     var shipNames = mutableListOf<String>()
+    var shipThumbnails = mutableListOf<String>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -74,7 +83,8 @@ class ShipListFragment : Fragment() {
             val shipLine = fileRead.nextLine()
             val data = shipLine.split("\t")
             shipNames.add(data[0])
-            if(counter++ >3) {
+            shipThumbnails.add(data[4])
+            if(counter++ >40) {
                 break
             }
         }
@@ -83,24 +93,43 @@ class ShipListFragment : Fragment() {
     }
 
     fun showShips() {
+        var i = 0
         for(shipName in shipNames) {
             val shipButton = ImageButton(activity)
-            val resId = resources.getIdentifier(shipName.toLowerCase()+"small", "drawable", activity?.packageName)
-            val url = "https://glossary-wows-global.gcdn.co/icons//vehicle/small/PASC510_1c368c094c16e8fc1fed07afbc237cb7fde0cf956ce171dc419eabfbaedf4364.png"
-            //shipButton.setImageResource(resId)
-            Picasso.get().load(url).into(shipButton)
+            //val resId = resources.getIdentifier(shipName.toLowerCase()+"small", "drawable", activity?.packageName)
+            val url = shipThumbnails[i]
+            Picasso.get()
+                .setIndicatorsEnabled(true)
+            Picasso
+                .get()
+                .load(url)
+                .resize(440,220)
+                .centerCrop()
+                .into(shipButton)
             shipList.addView(shipButton)
-//            android:tag="pasc510"
+            YoYo.with(Techniques.RotateIn)
+                .duration(700)
+                .repeat(5)
+                .playOn(shipButton);
             shipButton.setTag(shipName.toLowerCase())
-//            android:adjustViewBounds="true"
-//            android:scaleType="fitCenter"
-//            android:layout_width="0dp"
-//            android:layout_height="wrap_content"
-//            android:layout_columnWeight="1"
-//            android:layout_gravity="fill"
             shipButton.setOnClickListener { v ->
                 showShip(v.tag.toString())
             }
+            i++
         }
+
+        Ion.with(this)
+            .load("https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc")
+            .asJsonArray()
+            .setCallback(object: FutureCallback<JsonArray>{
+                override fun onCompleted(e: Exception?, result: JsonArray?) {
+                    if(result!=null) {
+                        val a = result[0] as JsonObject
+                        Log.v("SHIPSS",a.get("url").asString)
+                    }
+
+                }
+
+            })
     }
 }

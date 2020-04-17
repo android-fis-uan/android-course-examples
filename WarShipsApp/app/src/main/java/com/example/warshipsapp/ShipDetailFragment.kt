@@ -22,6 +22,15 @@ class ShipDetailFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_ship_detail, container, false)
     }
 
+    /*
+    0: id
+    1: name
+    2: type
+    3: nation
+    4: img_small
+    5: img_medium
+    6: description
+     */
     fun loadShip(shipId: String) {
         textId.setText(shipId)
         val resourceId = resources.getIdentifier(shipId.toLowerCase()+"medium","drawable",activity?.packageName)
@@ -33,8 +42,8 @@ class ShipDetailFragment : Fragment() {
             val shipLine = fileRead.nextLine()
             val data = shipLine.split("\t")
             if (data[0].toLowerCase() == shipId) {
-                textId.setText(data[4])
-                textDescription.setText(data[1])
+                textId.setText(data[1])
+                textDescription.setText(data[6])
                 Log.e("SHIPS","Ships loaded ${data}")
                 break
             }
